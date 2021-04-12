@@ -1,0 +1,13 @@
+---
+# tasks file for git
+- name: install git using ansible role
+  yum:
+    name: git
+    state: latest
+    update_cache: yes
+- name:  Check installed GIT version
+  shell: git --version
+  register: version
+- debug:
+    msg: "{{ version.stdout }}"
+    

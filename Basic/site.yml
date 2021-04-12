@@ -1,0 +1,8 @@
+---
+- name: Use of roles in ansible
+  hosts: application
+  gather_facts: false
+  become: yes
+  roles:
+    - git
+    - update
