@@ -1,0 +1,26 @@
+---
+# this is a simple ansible playbooks uses the print message using ansible shell module
+- name: Print the hello world using shell module
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Using shell module
+      shell: echo "Hello world !!!"
+      register: result
+    - debug:
+        msg: "{{ result.stdout }}"
+    - name: Using another task for print hostname
+      shell: hostname
+      register: result
+    - debug: 
+        msg: "{{ result.stdout }}"
+#  this is another task in same playbooks
+- name: Work with only DB server
+  hosts: db
+  gather_facts: false
+  tasks:
+      - name: Get host details
+        shell: uname -a
+        register: result
+      - debug:
+          msg: "{{ result.stdout }}"

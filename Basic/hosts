@@ -1,6 +1,19 @@
-localhost
+[application]
 
-[all:vars]
+192.168.60.11
+192.168.60.12
+
+[db]
+
+192.168.60.13
+
+[multi:children]
+
+application
+db
+
+[multi:vars]
+
 ansible_connection=ssh
-ansible_ssh_user=darkhost
+ansible_ssh_user=root
 ansible_ssh_pass=root
