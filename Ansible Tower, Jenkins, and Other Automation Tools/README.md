@@ -2,7 +2,8 @@
 
 ## in this section we are going to use Vagrant Box to install and use ansible tower
 
-> Note: **I  am using Vagrant in Windows 10**
+> :arrow_forward: **I  am using Vagrant in Windows 10**
+
 ```
     Using following commands we are creating vagrant box for ansible tower
 
@@ -14,6 +15,3 @@
     <!-- After just downloading and installation of ansible tower just  enter following command -->
     vagrant ssh
 ```
-
->[!WARNING]
->This is a warning
